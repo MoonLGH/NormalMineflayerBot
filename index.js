@@ -10,15 +10,24 @@ let color = "#RANDOM";
 let ip = config.ip;
 let username = config.username;
 let ver = config.version
+var bot
+if (config.password == "false") {
+  bot = mineflayer.createBot({
+    host: ip,
+    username: username,
+    version: ver
+  })
+} else {
+let pass = config.password;
 
-if(config.password != "false"){
-  
+  bot = mineflayer.createBot({
+    host: ip,
+    username: username,
+    password: pass,
+    version: ver
+  })
 }
-var bot = mineflayer.createBot({
-  host: ip,
-  username: username,
-  version: ver
-})
+
 
 // =========================
 // SET ACTIVITY BOT
@@ -111,7 +120,7 @@ client.on('message', msg => {
       .addField(` ${prefix}stop `, 'To Stop')
       .setColor(color)
     msg.channel.send(movement)
-  }else if (command == "delmsg"){
+  } else if (command == "delmsg") {
     msg.channel.bulkDelete(100)
   }
 
