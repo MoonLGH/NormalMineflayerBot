@@ -1,5 +1,5 @@
 {
-  "name": "new-bot",
+  "name": "normalmcbot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,9 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.0",
-    "discord.js": "^12.5.3",
+    "discord.js": "^12.3.1",
     "fs": "0.0.1-security",
-    "mineflayer": "^2.28.1",
+    "mineflayer": "^3.6.0",
     "ngrok": "^3.4.1",
     "readline-sync": "^1.4.10"
   }
