@@ -127,7 +127,7 @@ client.on('message', msg => {
 
 })
 
-bot.on("message", message => {
+bot.on("messagestr", message => {
   let channel = client.channels.cache.get(config.scid)
   if (!channel) return;
   channel.send(`From Server Chat >> ${message}`)
